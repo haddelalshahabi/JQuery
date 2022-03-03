@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ekstraoppgave 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="application/javascript">
+        function leggTilGjoremol(){
+            let ut;
+            ut = "<li>"
+            ut += "<input type='checkbox'>"
+            ut += "<span>" + $("#skrivInn").val() + "</span>"
+            ut += "</li>"
+
+            $("#gjoremol").append(ut);
+            $("input").val('');
+        }
+    </script>
+</head>
+<body>
+    <label for="skrivInn"> Todo liste: </label>
+    <input id="skrivInn" type="text" placeholder="skriv inn gjøremål" onchange="leggTilGjoremol()">
+    <h1>Gjøremål</h1>
+    <ul id="gjoremol"></ul>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="application/javascript">
+        function pluss() {
+            const in_1 = Number($("#in_1").val());
+            const in_2 = Number($("#in_2").val());
+            const output = $("#kall-output");
+            if(in_1 === "NaN" || in_2 === "NaN") {
+                alert("Feil tallformat, prøv igjen.");
+            } else {
+                output.html(in_1 + in_2);
+            }
+        }
+
+        function minus(){
+            const in_1 = Number($("#in_1").val());
+            const in_2 = Number($("#in_2").val());
+            const output = $("#kall-output");
+            if(in_1 === "NaN" || in_2 === "NaN") {
+                alert("Feil tallformat, prøv igjen.");
+            } else {
+                output.html(in_1 - in_2);
+            }
+        }
+
+        function gange() {
+            const in_1 = Number($("#in_1").val());
+            const in_2 = Number($("#in_2").val());
+            const output = $("#kall-output");
+            if(in_1 === "NaN" || in_2 === "NaN") {
+                alert("Feil tallformat, prøv igjen.");
+            } else {
+                output.html(in_1 * in_2);
+            }
+        }
+
+        function dele() {
+            const in_1 = Number($("#in_1").val());
+            const in_2 = Number($("#in_2").val());
+            const output = $("#kall-output");
+            if(in_1 === "NaN" || in_2 === "NaN") {
+                alert("Feil tallformat, prøv igjen.");
+            } else {
+                output.html(in_1 / in_2);
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h2>Oppgave 3</h2>
+    <input id="in_1" type="text" value=""/>
+    <input id="in_2" type="text" value=""/>
+    <button id="pluss" onclick="pluss()">+</button>
+    <button id="minus" onclick="minus()">-</button>
+    <button id="gange" onclick="gange()">*</button>
+    <button id="dele" onclick="dele()">/</button>
+    <div id="kall-output"> </div>
+</body>
+</html>

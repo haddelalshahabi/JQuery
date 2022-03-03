@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="application/javascript">
+        function printInfo(){
+            const navn = $("#navn").val();
+            const alder = $("#alder").val();
+            const output = $("#output");
+            if (!(alder > 0)){
+                alert("Du må skrive inn en alder større enn 0!");
+            } else {
+                output.html("Hei, " + navn + ". Du er " + alder +  " år gammel.")
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h2>Oppgave 1</h2>
+    Navn: <input id="navn" type="text" value=""/>
+    Alder: <input id="alder" type="text" value=""/>
+    <button id="navn_alder" onclick="printInfo()">Skriv ut navn og alder</button>
+    <div id="output"></div>
+</body>
+</html>
